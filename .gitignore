@@ -6,5 +6,11 @@
 # More information here http://doc.crates.io/guide.html#cargotoml-vs-cargolock
 Cargo.lock
 
+# openssl library and include files for windows goes here
 openssl
+
+# Visual Studio Folder
 .vs
+
+# Intellij IDEA
+.idea

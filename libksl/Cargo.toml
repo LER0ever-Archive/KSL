@@ -1,0 +1,13 @@
+[package]
+name        = "libksl"
+version     = "0.0.1"
+description = "Core Library to KickStart Linux"
+authors     = ["LER0ever <l.e.r@riseup.net>"]
+license     = "GPL V3"
+homepage    = "https://github.com/LER0ever/WSAOSC"
+workspace   = "../"
+
+[lib]
+name = "libksl"
+path = "src/lib.rs"
+crate-type = ["rlib", "dylib"] 

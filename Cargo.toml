@@ -1,29 +1,18 @@
-[package]
-name        = "KSL"
-version     = "0.0.1"
-description = "Install AOSC OS on WSL"
-authors     = ["LER0ever <l.e.r@riseup.net>"]
-license     = "GPL V3"
-homepage    = "https://github.com/LER0ever/WSAOSC"
+# [package]
+# name        = "KSL"
+# version     = "0.0.1"
+# description = "Utilities to Install Linux for Newbies"
+# authors     = ["LER0ever <l.e.r@riseup.net>"]
+# license     = "GPL V3"
+# homepage    = "https://github.com/LER0ever/WSAOSC"
 
-[lib]
-name = "libksl"
-path = "lib/lib.rs"
-crate-type = ["rlib", "dylib"] 
-
-[[bin]]
-name = "WSAOSC"
-path = "app/WSAOSC/main.rs"
-crate-type = ["bin"] 
-test = false
-doc = false
+[workspace]
+members = [
+    "app/WSAOSC",
+    "libksl",
+    "ksl_tests",
+]
 
 [profile.release]
 opt-level = 3 
 lto = true
-
-[dependencies]
-hyper = "0.9.12"
-
-[target.'cfg(windows)'.dependencies]
-winreg = "0.4"

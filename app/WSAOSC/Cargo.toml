@@ -1,0 +1,19 @@
+[package]
+name        = "WSAOSC"
+version     = "0.0.1"
+description = "Install AOSC OS on WSL"
+authors     = ["LER0ever <l.e.r@riseup.net>"]
+license     = "GPL V3"
+homepage    = "https://github.com/LER0ever/WSAOSC"
+workspace   = "../../"
+
+[[bin]]
+name = "WSAOSC"
+path = "src/main.rs"
+crate-type = ["bin"] 
+test = false
+doc = false
+
+[dependencies.libksl]
+path = "../../libksl"
+

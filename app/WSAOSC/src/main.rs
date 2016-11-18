@@ -1,8 +1,6 @@
 extern crate libksl;
-
-use libksl::test;
+use libksl::fs::isDirExist;
 
 fn main() {
-  test();
   println!("Hello, world!");
 }
