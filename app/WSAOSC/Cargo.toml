@@ -14,6 +14,8 @@ crate-type = ["bin"]
 test = false
 doc = false
 
+[dependencies]
+sciter-rs = {git = "https://github.com/pravic/rust-sciter" }
+
 [dependencies.libksl]
 path = "../../libksl"
-

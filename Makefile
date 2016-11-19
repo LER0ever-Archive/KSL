@@ -1,4 +1,4 @@
-
+# I don't know how to write makefile \o/
 all: env libksl WSAOSC
 env: 
 	call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64
