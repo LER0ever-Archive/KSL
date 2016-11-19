@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{C7CBDBED-50CA-46FC-BE3B-1D7809D42A0A}") = "KSL", "KSL.rsproj", "{C1F76205-F885-4809-8AA9-A862B726DF4E}"
+Project("{C7CBDBED-50CA-46FC-BE3B-1D7809D42A0A}") = "KSL", "KSL.rsproj", "{5C6026A5-705E-4AA8-9DA6-5171CA1F6B76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C1F76205-F885-4809-8AA9-A862B726DF4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1F76205-F885-4809-8AA9-A862B726DF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1F76205-F885-4809-8AA9-A862B726DF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1F76205-F885-4809-8AA9-A862B726DF4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6026A5-705E-4AA8-9DA6-5171CA1F6B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6026A5-705E-4AA8-9DA6-5171CA1F6B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6026A5-705E-4AA8-9DA6-5171CA1F6B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6026A5-705E-4AA8-9DA6-5171CA1F6B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
