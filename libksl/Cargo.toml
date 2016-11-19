@@ -11,3 +11,8 @@ workspace   = "../"
 name = "libksl"
 path = "src/lib.rs"
 crate-type = ["rlib", "dylib"] 
+
+[dependencies]
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.4"
