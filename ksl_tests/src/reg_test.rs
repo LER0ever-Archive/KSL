@@ -1,4 +1,4 @@
-﻿use libksl::reg::get_str_value;
+﻿use libksl::reg::*;
 
 #[test]
 fn test_get_int_value() {

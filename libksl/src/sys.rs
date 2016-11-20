@@ -1,7 +1,7 @@
 pub enum OSType {
-    Windows,
     Linux,
     macOS,
+    Windows,
     FreeBSD,
     VoidOS
 }
@@ -12,35 +12,6 @@ pub enum Arch {
     powerpc64,
     arm,
     aarch64
-}
-
-#[macro_export]
-macro_rules! match_cfg {
-    ( $( ($cfg:meta) => $e:expr, )* _ => $last:expr, ) => {
-        match () {
-            $(
-                #[cfg($cfg)]
-                () => $e,
-            )*
-
-            #[cfg(all( $( not($cfg) ),* ))]
-            () => $last,
-        }
-    };
-
-    ( $( ($cfg:meta) => $e:expr, )* ) => {
-        match_cfg! {
-            $(
-                ($cfg) => $e,
-            )*
-
-            _ => {
-                #[allow(dead_code)]
-                #[static_assert]
-                static MATCH_CFG_FALLBACK_UNREACHABLE: bool = false;
-            },
-        }
-    };
 }
 
 pub fn get_os_type() -> OSType {
@@ -56,14 +27,24 @@ pub fn get_os_type() -> OSType {
     if cfg!(target_os = "freebsd"){
         return OSType::FreeBSD;
     }
+    OSType::Linux
 }
 
 pub fn get_arch() -> Arch {
-    match_cfg! {
-        (target_arch = "x86_64") => Arch::amd64,
-        (target_arch = "x86") => Arch::i386,
-        (target_arch = "powerpc64") => Arch::powerpc64,
-        (target_arch = "arm") => Arch::arm,
-        (target_arch = "aarch64") => Arch::aarch64,
+    if cfg!(target_arch = "x86_64"){
+        return Arch::amd64;
     }
+    if cfg!(target_arch = "x86") {
+        return Arch::i386;
+    }
+    if cfg!(target_arch = "powerpc64"){
+        return Arch::powerpc64;
+    }
+    if cfg!(target_arch = "arm"){
+        return Arch::arm;
+    }
+    if cfg!(target_arch = "aarch64") {
+        return Arch::aarch64;
+    }
+    Arch::amd64
 }

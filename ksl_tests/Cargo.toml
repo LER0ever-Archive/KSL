@@ -7,11 +7,15 @@ license     = "GPL V3"
 homepage    = "https://github.com/LER0ever/WSAOSC"
 workspace   = "../"
 
+#[allow(dead_code, non_camel_case_types)]
 [lib]
 name = "ksl_tests"
 path = "src/lib.rs"
 test = true
 doc = false
+
+[dependencies]
+matches = "0.1.4"
 
 [dependencies.libksl]
 path = "../libksl"
